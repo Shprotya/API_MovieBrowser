@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMDB Movie Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Filter & Sort</h2>
+            
+            <div class="filter-section">
+                <h3>Search</h3>
+                <input type="text" id="search-input" placeholder="Search movies...">
+                <button id="search-button">Search</button>
+            </div>
+
+            <div class="filter-section">
+                <h3>Discover</h3>
+                <button id="trending-button" class="filter-btn">Trending Now</button>
+                <button id="popular-button" class="filter-btn">Popular</button>
+                <button id="top-rated-button" class="filter-btn">Top Rated</button>
+                <button id="upcoming-button" class="filter-btn">Upcoming</button>
+            </div>
+
+            <div class="filter-section">
+                <h3>Sort By</h3>
+                <select id="sort-select">
+                    <option value="">Default</option>
+                    <option value="popularity">Popularity</option>
+                    <option value="rating">Rating</option>
+                    <option value="year">Year</option>
+                    <option value="title">Title (A-Z)</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3>Genre</h3>
+                <select id="genre-select">
+                    <option value="">All Genres</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Movie Browser</h1>
+            <div id="movie-grid">
+                <p class="loading">Select a category to browse movies.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Movie Details -->
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="movie-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
